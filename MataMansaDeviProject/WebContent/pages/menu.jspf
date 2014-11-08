@@ -1,0 +1,40 @@
+<table width="100%" bgcolor="#F09050">
+ <tr>
+
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+    <a href="Home.jsp" style="text-decoration:none">HOME</a>
+   </font>
+  </td>
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+    <a href="PageUnderConstruction.jsp"
+       style="text-decoration:none">MEMBER REGISTRATION FORM</a>
+   </font>
+  </td>
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+  <a href="BhandaraCommitteeMembers.jsp" style="text-decoration:none">BHANDARA COMMITTEE MEMBER</a>
+   </font>
+  </td>
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+    <a href="MataAppeal.jsp"
+       style="text-decoration:none">MATA APPEAL</a>
+   </font>
+  </td>
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+    <a href="Snapshot.jsp"
+       style="text-decoration:none">SNAPSHOTS</a>
+   </font>
+  </td>
+  
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+    <a href="ContactUs.jsp"
+       style="text-decoration:none">CONTACT US</a>
+   </font>
+  </td>
+ </tr>
+ </table>
