@@ -18,7 +18,7 @@
 			<td width="100%"><tiles:insert attribute="menu" /></td>
 		</tr>
 		<tr>
-			<td width="100%">
+			<td width="100%" align="center">
 				<div style="color: red">
 					<html:errors />
 				</div> 

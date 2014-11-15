@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-
 <!DOCTYPE struts-config PUBLIC
           "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
           "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
-
-<struts-config>
-
- 
+<struts-config> 
 	<form-beans>
-
 		<form-bean name="LoginForm" type="com.matamansadevisdbc.LoginForm" />
-
 	</form-beans>
-
-
-
 	<action-mappings>
-
 		<action input="/MemberLoginPage.jsp" name="LoginForm" path="/Login"
 			scope="session" type="com.matamansadevisdbc.LoginAction">
-
-			<forward name="success" path="/success.jsp" />
-
-			<forward name="failure" path="/failure.jsp" />
-
+			<forward name="admin" path="/AdminView.jsp" />
+			<forward name="member" path="/MemberView.jsp" />
+			<forward name="home" path="/Home.jsp" />
+			<forward name="failure" path="/MemberLoginPage.jsp" />
 		</action>
-
 	</action-mappings>
 <message-resources parameter="com/matamansadevisdbc/ApplicationResource"/>
 </struts-config>

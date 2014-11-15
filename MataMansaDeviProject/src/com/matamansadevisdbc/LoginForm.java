@@ -12,6 +12,16 @@ public class LoginForm extends ActionForm {
 	private String userName;
 
 	private String password;
+	
+	private String memberType;
+
+	public String getMemberType() {
+		return memberType;
+	}
+
+	public void setMemberType(String memberType) {
+		this.memberType = memberType;
+	}
 
 	public String getUserName() {
 		return userName;

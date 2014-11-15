@@ -9,18 +9,32 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 public class LoginAction extends Action{
-	private final static String SUCCESS = "success";
-
+	
+	private final static String ADMIN = "admin";
+	private final static String MEMBER = "member";
+	private final static String HOME = "home";
 	private final static String FAILURE = "failure";
 
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
-		System.out.println("Inside Action Servlet");
+		System.out.println("Inside Action Servlet================================");
 		LoginForm loginForm = (LoginForm) form;
+		System.out.println(loginForm.getMemberType() + loginForm.getUserName()+loginForm.getPassword());
 		if (loginForm.getUserName().equals(loginForm.getPassword())) {
-			return mapping.findForward(SUCCESS);
+			if(loginForm.getMemberType().trim().equals("Admin"))
+			{
+				return mapping.findForward(ADMIN);
+			}
+			else if(loginForm.getMemberType().trim().equals("Member"))
+			{
+				return mapping.findForward(MEMBER);
+			}
+			else
+				return mapping.findForward(HOME);
+			
 		} else {
+			
 			return mapping.findForward(FAILURE);
 		}
 	}
