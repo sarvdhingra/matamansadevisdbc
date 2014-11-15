@@ -1,5 +1,5 @@
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
-
+<%@taglib uri="/WEB-INF/struts-html.tld" prefix="html" %>
 <tiles:insert page="/templates/mmdBaseLayout.jsp" flush="true">
   <tiles:put name="title" value="Mata Mansa Devi Sewak Dal Bhandara Committee"/>
   <tiles:put name="header" value="/pages/header.jspf"/>

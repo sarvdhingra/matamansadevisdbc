@@ -4,31 +4,34 @@
 <%@ taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@ taglib uri="http://struts.apache.org/tags-tiles" prefix="tiles"%>
 <html:html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
-    <title>
-      <tiles:getAsString name="title"/>
-    </title>
-  </head>
-  <body background="images/bg-template.jpg">
-    <table cellspacing="2" cellpadding="3" width="100%">
-      <tr>
-        <td width="100%"><tiles:insert attribute="header"/></td>
-      </tr><tr>
-        <td width="100%">
-          <tiles:insert attribute="menu"/>
-        </td>
-      </tr><tr>
-        <td width="100%">
-          <tiles:insert attribute="body"/>
-        </td>
-      </tr><tr>
-        <td width="100%">
-          <tiles:insert attribute="footer"/>
-        </td>
-      </tr>
-    </table>
-    
-  </body>
-  
+<head>
+<meta http-equiv="Content-Type"
+	content="text/html; charset=windows-1252" />
+<title><tiles:getAsString name="title" /></title>
+</head>
+<body background="images/bg-template.jpg">
+	<table cellspacing="2" cellpadding="3" width="100%">
+		<tr>
+			<td width="100%"><tiles:insert attribute="header" /></td>
+		</tr>
+		<tr>
+			<td width="100%"><tiles:insert attribute="menu" /></td>
+		</tr>
+		<tr>
+			<td width="100%">
+				<div style="color: red">
+					<html:errors />
+				</div> 
+				
+					<tiles:insert attribute="body" />
+			
+			</td>
+		</tr>
+		<tr>
+			<td width="100%"><tiles:insert attribute="footer" /></td>
+		</tr>
+	</table>
+
+</body>
+
 </html:html>

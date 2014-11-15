@@ -16,6 +16,7 @@ public class LoginAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+		System.out.println("Inside Action Servlet");
 		LoginForm loginForm = (LoginForm) form;
 		if (loginForm.getUserName().equals(loginForm.getPassword())) {
 			return mapping.findForward(SUCCESS);

@@ -1,14 +1,6 @@
-<%@taglib uri="../WEB-INF/struts-html.tld" prefix="html" %>
-<div style="color: red">
-<html:errors />
-</div>
+<form action="/MataMansaDeviProject/Login.do">
+	Username:<input type="text">
+	Password:<input type="password">
+	<input type="submit" value="Login">
+</form>
 
-<html:form action="/Login">
-
-User Name :<html:text name="LoginForm" property="userName" />
-
-Password  :<html:password name="LoginForm" property="password" />
-
-	<html:submit value="Login" />
-
-</html:form>

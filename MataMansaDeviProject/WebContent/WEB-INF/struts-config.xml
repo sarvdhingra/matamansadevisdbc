@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+
 <!DOCTYPE struts-config PUBLIC
-          "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN"
-          "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
 
 <struts-config>
 
+ 
 	<form-beans>
 
 		<form-bean name="LoginForm" type="com.matamansadevisdbc.LoginForm" />
@@ -25,4 +27,5 @@
 		</action>
 
 	</action-mappings>
+<message-resources parameter="com/matamansadevisdbc/ApplicationResource"/>
 </struts-config>
