@@ -1,0 +1,14 @@
+<%@taglib uri="../WEB-INF/struts-html.tld" prefix="html" %>
+<div style="color: red">
+<html:errors />
+</div>
+
+<html:form action="/Login">
+
+User Name :<html:text name="LoginForm" property="userName" />
+
+Password  :<html:password name="LoginForm" property="password" />
+
+	<html:submit value="Login" />
+
+</html:form>
