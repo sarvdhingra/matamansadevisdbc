@@ -1,7 +1,10 @@
 package com.matamansadevisdbc;
 
+import java.sql.Connection;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
@@ -18,6 +21,11 @@ public class LoginAction extends Action{
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
+		/*DataSource dataSource=null;
+		Connection connection=null;
+		dataSource = getDataSource(request);
+		connection = dataSource.getConnection();*/
+//		System.out.println(connection.toString());
 		System.out.println("Inside Action Servlet================================");
 		LoginForm loginForm = (LoginForm) form;
 		System.out.println(loginForm.getMemberType() + loginForm.getUserName()+loginForm.getPassword());
