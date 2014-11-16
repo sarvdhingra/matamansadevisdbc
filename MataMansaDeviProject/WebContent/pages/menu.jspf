@@ -8,13 +8,19 @@
   </td>
   <td align="center">
    <font style="font-family:Mistral;" color="red">
-    <a href="PageUnderConstruction.jsp"
-       style="text-decoration:none">MEMBER REGISTRATION FORM</a>
+    <a href="108NamesOfMaaDurga1.jsp"
+       style="text-decoration:none">108 NAMES</a>
    </font>
   </td>
   <td align="center">
    <font style="font-family:Mistral;" color="red">
-  <a href="BhandaraCommitteeMembers.jsp" style="text-decoration:none">BHANDARA COMMITTEE MEMBER</a>
+    <a href="MemberLoginPage.jsp"
+       style="text-decoration:none">MEMBERS LOGIN PAGE</a>
+   </font>
+  </td>
+  <td align="center">
+   <font style="font-family:Mistral;" color="red">
+  <a href="BhandaraCommitteeMembers.jsp" style="text-decoration:none">BHANDARA COMMITTEE MEMBERS</a>
    </font>
   </td>
   <td align="center">
