@@ -1,15 +1,18 @@
 package com.matamansadevisdbc;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
 
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
+
+import com.matamansadevisdbc.utilities.UtilityManager;
 
 public class LoginAction extends Action{
 	
@@ -26,10 +29,22 @@ public class LoginAction extends Action{
 		dataSource = getDataSource(request);
 		connection = dataSource.getConnection();*/
 //		System.out.println(connection.toString());
+		Connection conn = UtilityManager.getConnection();
+		PreparedStatement psStatement = conn.prepareStatement("select count(*) from member where memberName=? and password=? and memberType=?");
+		
 		System.out.println("Inside Action Servlet================================");
 		LoginForm loginForm = (LoginForm) form;
 		System.out.println(loginForm.getMemberType() + loginForm.getUserName()+loginForm.getPassword());
-		if (loginForm.getUserName().equals(loginForm.getPassword())) {
+		if (loginForm.getUserName()!=null && loginForm.getPassword()!=null && loginForm.getMemberType()!=null) {
+			psStatement.setString(0, loginForm.getUserName());
+			psStatement.setString(1, loginForm.getPassword());
+			psStatement.setString(2, loginForm.getMemberType());
+			ResultSet rs = psStatement.executeQuery();
+			System.out.println("before result set");
+			while(rs.next())
+			{
+				System.out.println(rs.getString(0));
+			}
 			if(loginForm.getMemberType().trim().equals("Admin"))
 			{
 				return mapping.findForward(ADMIN);
